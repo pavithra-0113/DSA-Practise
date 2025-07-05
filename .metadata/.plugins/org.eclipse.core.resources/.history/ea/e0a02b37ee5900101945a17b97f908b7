@@ -36,14 +36,14 @@ public class FindMidLength {
 //		return head.data;
 	
 	
-	static int getMid(Node head) {
+	static int getLength(Node head) {
 		
 		Node slow_ptr=head;
 		Node fast_ptr=head;
 		
-		while(fast_ptr!=null && fast_ptr.next!=null) {
-			fast_ptr=fast_ptr.next.next;
-			slow_ptr=slow_ptr.next;
+		if(fast_ptr!=null && fast_ptr.next!=null) {
+			fast_ptr=head.next.next;
+			slow_ptr=head.next;
 			
 		}
 		return slow_ptr.data;

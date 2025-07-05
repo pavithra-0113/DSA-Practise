@@ -13,40 +13,27 @@ public class FindMidLength {
 		}
 	}
 		
-//		static int getLength(Node head) {
-//			int len=0;
-//			while(head!=null) {
-//				len++;
-//				head=head.next;
-//			}
-//			return len;
-//		}
-//		
-//	 
-//		
-//	static int getMid(Node head) {
-//		
-//		int len=getLength(head);
-//		
-//		int mid_ind=len/2;
-//		while(mid_ind>0) {
-//			head=head.next;
-//			mid_ind--;
-//		}
-//		return head.data;
-	
-	
+		static int getLength(Node head) {
+			int len=0;
+			while(head!=null) {
+				len++;
+				head=head.next;
+			}
+			return len;
+		}
+		
+	 
+		
 	static int getMid(Node head) {
 		
-		Node slow_ptr=head;
-		Node fast_ptr=head;
+		int len=getLength(head);
 		
-		while(fast_ptr!=null && fast_ptr.next!=null) {
-			fast_ptr=fast_ptr.next.next;
-			slow_ptr=slow_ptr.next;
-			
+		int mid_ind=len/2;
+		while(mid_ind>0) {
+			head=head.next;
+			mid_ind--;
 		}
-		return slow_ptr.data;
+		return head.data;
 	}
 
 	public static void main(String[] args) {
