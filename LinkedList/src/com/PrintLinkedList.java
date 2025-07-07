@@ -1,7 +1,5 @@
 package com;
 
-import com.CountNodes.Node;
-
 public class PrintLinkedList {
 	
 	class Node{
